@@ -1,0 +1,142 @@
+/*
+Colors used:
+Primary Color: #45B889
+Dark Accent: #3D82AB
+Light Accent: #91D4C2
+Dark Shade: #003853
+Light Shade: #FCFCFC
+*/
+body {
+  background-color: #FCFCFC;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #01151F;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Yantramanav', sans-serif;
+  light-height: 1;
+  color: #45B889;
+}
+
+h1 {
+  font-size: 6.6875em;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+}
+
+h2 {
+  color: #45B889;
+  font-size: 4.1875em;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+h3 {
+  color: #45B889;
+  font-size: 3.375em;
+  font-weight: 500;
+  letter-spacing: 0px;
+}
+
+h4 {
+  color: #45B889;
+  font-size: 2.375em;
+  font-weight: 500;
+  letter-spacing: 0.25px;
+}
+
+h5 {
+  color: #45B889;
+  font-size: 1.6875em;
+  font-weight: 500;
+  letter-spacing: 0px;
+}
+
+h6 {
+  color: #45B889;
+  font-size: 1.375em;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+}
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  color: #44586A;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #3A3D62;
+}
+
+a:hover,
+a:focus {
+  color: #44586A;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #3D82AB;
+}
+
+#hero {}
+
+#work {}
+
+#footer {}
+
+#about {}
+
+#expertbell {}
+
+.button {
+  display: in-line block;
+  background-color: #45B889;
+  color: #FFFFFF !important;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px;
+  transition: 0.2s opacity;
+}
+
+.button:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.button:active {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.button.contact {
+  background-color: transparent;
+  color: #45BB89 !important;
+  text-transform: uppercase;
+  border: 2px solid;
+  border-color: #45B889;
+}
+
+.button.contact:hover {
+  display: in-line block;
+  background-color: #45B889;
+  color: #FFFFFF !important;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px;
+  transition: 0.2s opacity;
+}
+
+.button.contact:active {
+  opacity: 0.8;
+  text-decoration: none;
+}
