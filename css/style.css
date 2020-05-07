@@ -13,7 +13,7 @@ Light Shade: #FCFCFC
 body {
   background-color: #fcfcfc;
   font-family: "Open Sans", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
   line-height: 1.5;
   color: #01151f;
@@ -24,9 +24,8 @@ body {
 header {
   width: 100%;
   background-color: #0d3153;
-  padding-top: 10px;
+  padding-top: 15px;
   padding-bottom: 10px;
-  text-align: center;
   position: fixed;
   -webkit-box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.2);
   -moz-box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.2);
@@ -39,7 +38,7 @@ nav {
 }
 
 main {
-  padding-top: 182px;
+  padding-top: 93px;
 }
 
 footer {
@@ -54,9 +53,9 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: "Yantramanav", sans-serif;
+  font-family: 'PT Serif', serif;
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1;
   color: #45b889;
   margin: auto;
@@ -78,21 +77,21 @@ h2 {
 h3 {
   color: #45b889;
   font-size: 1.953em;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 0px;
 }
 
 h4 {
   color: #45b889;
   font-size: 1.563em;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 0.25px;
 }
 
 h5 {
   color: #45b889;
   font-size: 1.25em;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 0px;
 }
 
@@ -124,17 +123,17 @@ a:active {
   display: inline-block;
   background-color: #45b889;
   color: #ffffff !important;
-  text-decoration: none;
   font-weight: 500;
+  text-decoration: none;
   padding: 10px;
   border-radius: 3px;
   border-bottom: 2px;
-  transition: 0.2s opacity;
+  transition-duration: 0.5s;
+  transition-property: opacity;
 }
 
 .button:hover {
   opacity: 0.8;
-  text-decoration: none;
 }
 
 .button:active {
@@ -151,6 +150,8 @@ a:active {
   padding: 10px;
   border: 2px solid;
   border-color: #45b889;
+  transition-duration: 0.5s;
+  transition-property: opacity;
 }
 
 .button.contact:hover {
@@ -161,7 +162,6 @@ a:active {
   padding: 10px;
   border-radius: 3px;
   border-bottom: 2px;
-  transition: 0.2s opacity;
 }
 
 .button.contact:active {
@@ -173,6 +173,13 @@ a:active {
   display: inline-block;
   width: 3.5em;
   text-align: center;
+}
+
+.title {
+  font-family: 'PT Serif', serif;
+  font-size: 1.953em;
+  font-weight: 400;
+  color: #FFFFFF;
 }
 
 /* Layout styling */
@@ -187,6 +194,10 @@ a:active {
 
 #hero h1 {
   text-align: center;
+}
+
+#hero span {
+  display: block;
 }
 
 #work {
@@ -303,4 +314,151 @@ nav>ul>li>a:active {
   color: #3d82ab;
   text-decoration: none;
   text-align: center;
+}
+
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+.heart {
+    animation: 5s heart-move infinite alternate linear;
+
+}
+
+@keyframes color-change {
+  0% {
+    fill: #EDC655;
+  }
+
+  50% {
+    fill: #fcffad;
+  }
+
+  100% {
+    fill: #f76414;
+  }
+}
+
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+
+  to: {
+    transform: translate(200px, 50px);
+  }
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+
+@keyframes heart-move {
+ from {
+    transform: translate(0px, 0px);
+  }
+
+  to: {
+    transform: translate(200px, 50px);
+  }
+}
+
+/* === Medium Devices (640px and larger) === */
+@media only screen and (min-width:640px) {
+  header {
+    text-align: unset;
+    padding: 20px 0 13px;
+  }
+
+  nav {
+    width: auto;
+    float: right;
+    margin-top: 4px;
+  }
+
+  .col-md-6 {
+    width: 50%;
+  }
+
+  [class*="col-"] {
+    float: left;
+    padding: 10px;
+  }
+
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  #about h3 {
+    margin-top: 0;
+  }
+
+  #about .center {
+    margin-left: 0;
+  }
+}
+
+/* === Large Devices (1024px or larger) === */
+@media only screen and (min-width: 1024px) {
+  .col-lg-7 {
+    width: 60%;
+  }
+
+  .col-lg-5 {
+    width: 40%;
+  }
+
+  [class*="col-"] {
+    float: left;
+    padding: 10px;
+  }
+
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+/* === X-large devices (1440px or larger) */
+@media only screen and (min-width: 1440px) {
+  .col-xl-7 {
+    width: 60%;
+  }
+
+  .col-xl-5 {
+    width: 40%;
+  }
+
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  [class*="col-"] {
+    float: left;
+    padding: 10px;
+  }
+
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
 }
