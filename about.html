@@ -15,15 +15,19 @@
 
   <!--Header-->
   <header>
+    <script src="https://kit.fontawesome.com/01b7c8dea1.js" crossorigin="anonymous"></script>
     <div class="container">
-      <a href="index.html" class="title">Keina Amora</a>
-      <nav>
-        <ul class="navigation">
-          <li><a href="index.html">Work</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="#footer">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="navtoggle" id="myNavtoggle">
+        <a href="index.html" class="title">Keina Amora</a>
+        <nav>
+          <ul>
+            <li><a href="index.html">Work</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#footer" onclick="menuToggle()">Contact</a></li>
+            <li><a href="javascript:void(0);" class="hamburgericon" onclick="menuToggle()"><i class="fas fa-bars"></i></a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
   <!--End Header-->
