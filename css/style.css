@@ -6,7 +6,6 @@ Light Accent: #91D4C2
 Dark Shade: #003853
 Light Shade: #FCFCFC
 */
-
 * {
   box-sizing: border-box;
 }
@@ -25,17 +24,11 @@ body {
 header {
   width: 100%;
   background-color: #0d3153;
-  padding-top: 15px;
   padding-bottom: 10px;
   position: fixed;
   -webkit-box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.2);
   -moz-box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.2);
   box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.2);
-}
-
-nav {
-  display: inline-block;
-  width: 100%;
 }
 
 main {
@@ -183,6 +176,8 @@ a:active {
   color: #FFFFFF;
 }
 
+.hamburgericon {}
+
 /* Layout styling */
 #hero {
   background-color: #0d3153;
@@ -223,6 +218,8 @@ a:active {
   padding-top: 15px;
 }
 
+#myNavtoggle {}
+
 .container {
   padding: 0 15px;
 }
@@ -240,10 +237,6 @@ a:active {
   text-align: center;
 }
 
-.navigation {
-  text-align: center;
-}
-
 .profile {
   width: 250px;
   display: block;
@@ -255,25 +248,40 @@ a:active {
   padding: 15px;
 }
 
-nav>ul {
-  display: inline-block;
-  list-style-type: none;
-  padding: 0;
-  text-align: center;
+.navtoggle li:not(:last-child) {
+  display: none;
 }
 
-nav>ul>li {
-  display: inline-block;
-  text-align: center;
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+
+.navtoggle li .hamburgericon {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  font-size: 20px;
+  padding-right: 0;
+}
+
+.navtoggle.responsive li  {
+  display: block;
+}
+
+nav {
+  width: 100%;
+}
+
+nav>ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
 nav>ul>li>a {
   display: inline-block;
   padding: 0 15px;
   text-transform: uppercase;
-  text-align: center;
   font-weight: 700;
   color: #ffffff;
   text-decoration: none;
@@ -286,7 +294,6 @@ nav>ul>li>a:visited {
   font-weight: 700;
   color: #ffffff;
   text-decoration: none;
-  text-align: center;
 }
 
 nav>ul>li>a:hover {
@@ -295,7 +302,6 @@ nav>ul>li>a:hover {
   text-transform: uppercase;
   font-weight: 700;
   color: #91d4c2;
-  text-align: center;
 }
 
 nav>ul>li>a:focus {
@@ -304,7 +310,6 @@ nav>ul>li>a:focus {
   text-transform: uppercase;
   font-weight: 700;
   color: #91d4c2;
-  text-align: center;
 }
 
 nav>ul>li>a:active {
@@ -314,7 +319,6 @@ nav>ul>li>a:active {
   font-weight: 700;
   color: #3d82ab;
   text-decoration: none;
-  text-align: center;
 }
 
 .sun {
@@ -330,8 +334,7 @@ nav>ul>li>a:active {
 }
 
 .heart {
-    animation: 5s heart-move infinite alternate linear;
-
+  animation: 5s heart-move infinite alternate linear;
 }
 
 @keyframes color-change {
@@ -369,7 +372,7 @@ nav>ul>li>a:active {
 }
 
 @keyframes heart-move {
- from {
+  from {
     transform: translate(0px, 0px);
   }
 
@@ -381,17 +384,36 @@ nav>ul>li>a:active {
 /* === Small Devices (640px and smaller) === */
 @media only screen and (max-width:640px) {
   header {
-    text-align: center;
-    padding: 20px 0 13px;
+    padding: 10px 0 10px;
   }
 
   main {
-    padding-top: 127px;
+    padding-top: 59px;
+  }
+
+  .title {
+    font-family: 'PT Serif', serif;
+    font-size: 1.625em;
+    font-weight: 400;
+    color: #FFFFFF;
+  }
+  .navtoggle.responsive nav {
+    padding: 0px 0 0;
+  }
+
+  .navtoggle.responsive li  {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .navtoggle.responsive li:last-child  {
+    padding: 0 0 10px;
   }
 }
 
-/* === Medium Devices (640px and larger) === */
-@media only screen and (min-width:640px) {
+/* === Medium Devices (641px and larger) === */
+@media only screen and (min-width:641px) {
   header {
     text-align: unset;
     padding: 20px 0 13px;
@@ -405,6 +427,18 @@ nav>ul>li>a:active {
 
   main {
     padding-top: 93px;
+  }
+
+  .title {
+
+  }
+
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+
+  .navtoggle li:last-child {
+    display: none;
   }
 
   .col-md-6 {
@@ -428,6 +462,16 @@ nav>ul>li>a:active {
 
   #about .center {
     margin-left: 0;
+  }
+
+  nav>ul {
+   margin: 1em 0;
+ }
+
+  nav>ul>li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 0;
   }
 }
 
